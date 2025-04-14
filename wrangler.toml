@@ -1,0 +1,11 @@
+name = "resumelandingpage"
+main = "worker/index.js"
+compatibility_date = "2025-04-14"
+
+[site]
+bucket = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "resume_visits"
+database_id = "b9574fc9-d518-4775-8c48-f419bffd4819"

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Kawtharani - Resume</title>
-    <link rel="stylesheet" href="CS254 Project.css">
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
     <header>
         <h1>Ali Kawtharani</h1>
         <p>Computer Science Student - LIU Brooklyn | Tech Enthusiast</p>
+        <p id="counter" class="visit-counter">Loading visits...</p>
     </header>
 
     <section id="about">
@@ -36,5 +37,24 @@
     <footer>
         <p>© 2025 Ali Kawtharani</p>
     </footer>
+
+<script>
+window.onload = function () {
+  fetch("https://resumelandingpage.alielhadi7.workers.dev")
+    .then(res => res.json())
+    .then(data => {
+      const counter = document.getElementById("counter");
+      if (counter) {
+        counter.textContent = `👀 Visits: ${data.count}`;
+      }
+    })
+    .catch(() => {
+      const counter = document.getElementById("counter");
+      if (counter) {
+        counter.textContent = "Could not load visits";
+      }
+    });
+};
+</script>
 </body>
 </html>
