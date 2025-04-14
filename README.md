@@ -21,18 +21,6 @@ This project is a personal resume website enhanced with Cloudflare Workers and D
 4. Run `npx wrangler deploy` to deploy the Worker  
 5. Run `npx wrangler pages deploy ./dist --project-name=resumelandingpage` to deploy the site
 
-## Project Structure
-CS254Project/
-├── dist/
-│   ├── index.html
-│   └── styles.css
-├── worker/
-│   └── index.js
-├── schema.sql
-├── wrangler.toml
-├── README.md
-└── research.md
-
 ## Live Demo
 - Site: [https://aliresume.xyz](https://aliresume.xyz)  
 - Worker API: [https://resumelandingpage.alielhadi7.workers.dev](https://resumelandingpage.alielhadi7.workers.dev)
